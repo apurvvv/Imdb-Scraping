@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+{% block content %}
+
+<div class="jumbotron" align="center">
+      <div class="container">
+        <table class="table table-bordered sortable table-hover">
+          <h3><b>{{ movie_column.movie_name}} ( {{ movie_column.movie_star}} / 10 )</b></h3>
+          <blockquote class="text-justify">" {{movie_column.movie_description}} "</blockquote>
+          <img src ="{{movie_column.movie_pic}}">
+          <thead>
+            <tr>
+              <th>Cast </th>
+              <th> Character</th>
+            </tr>
+          </thead>
+          <tbody>
+            {%for movie in movie%}
+            <tr >
+                <td>{{movie.name}}</td>
+                <td>{{movie.character}}</td>
+
+            {%endfor%}
+          </tr>
+        </tbody>
+      </div>
+
+    </div>
+
+{% endblock %}

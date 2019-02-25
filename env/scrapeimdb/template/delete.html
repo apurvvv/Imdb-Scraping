@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block content %}
+<div class="jumbotron" align="center">
+    <div class="container">
+    <h1> Data will be lost . Are you sure to delete ? </h1>
+    <form  method="post">
+      {%csrf_token%}
+      <input type="submit" class='btn btn-lg btn-danger'  value="Delete Movie ! ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+      <a href="/product" class='btn btn-lg btn-success'>Cancel</a>
+    </form>
+    </div>
+    </div>
+
+
+{% endblock %}
